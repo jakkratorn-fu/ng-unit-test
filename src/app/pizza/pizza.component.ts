@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
 
 @Component({
   selector: 'app-pizza',
@@ -9,9 +8,15 @@ import { TestBed } from '@angular/core/testing';
 export class PizzaComponent implements OnInit {
   title: String = "I love pizza!"
   isOn = false;
+  message = 'is off'
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clicked() {
+    this.isOn = !this.isOn
+    this.message = 'is on'
   }
 }
